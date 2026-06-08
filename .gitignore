@@ -1,0 +1,51 @@
+# Bảo mật - KHÔNG PUSH LÊN GITHUB
+telegram.js
+*.env
+.env.local
+.env.*.local
+
+# File chứa token thật
+*telegram*.js
+!telegram-example.js
+
+# Backup files
+*.backup
+*.old
+*.bak
+
+# IDE - bỏ qua file cấu hình editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories (nếu có)
+node_modules/
+jspm_packages/
+
+# Optional: lock files
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+out/
+
+# Local development server
+.env
+.vercel
+.netlify
